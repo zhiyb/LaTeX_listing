@@ -1,2 +1,2 @@
 # LaTeX_listing
-Listing source codes using LaTeX
+Scripts for listing source codes using LaTeX
