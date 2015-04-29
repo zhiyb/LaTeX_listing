@@ -85,7 +85,8 @@ define run-pdflatex
 endef
 
 define get_dependencies
-	deps=`perl -ne '($$_)=/^[^%]*\\\(?:include|input)\{(.*?)\}/;@_=split /,/;foreach $$t (@_) {print "$$t.tex "}' $<`
+	deps=`perl -ne '($$_)=/^[^%]*\\\(?:include)\{(.*?)\}/;@_=split /,/;foreach $$t (@_) {print "$$t.tex "}' $<`
+	#deps=`perl -ne '($$_)=/^[^%]*\\\(?:include|input)\{(.*?)\}/;@_=split /,/;foreach $$t (@_) {print "$$t.tex "}' $<`
 endef
 
 define getbibs
