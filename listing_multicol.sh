@@ -18,6 +18,14 @@ echo '\documentclass[a4paper,notitlepage,10pt]{report}
 \newcommand{\fsize}{\tiny}
 \newcommand{\tabsize}{4}
 
+\lstdefinelanguage{diff}{
+  morecomment=[f][\color{blue}]{@@},     % group identifier
+  morecomment=[f][\color{red}]-,         % deleted lines
+  morecomment=[f][\color{dkgreen}]+,       % added lines
+  morecomment=[f][\color{magenta}]{---}, % Diff header lines (must appear after +,-)
+  morecomment=[f][\color{magenta}]{+++},
+}
+
 \lstset{frame=tb,
   language=C++,
   aboveskip=0mm,
