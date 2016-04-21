@@ -1,7 +1,7 @@
 #! /bin/bash
 
 files=($(while (($# != 0)); do
-	find "$1" -type f -name '*.cpp' -o -name '*.c' -o -name '*.h'
+	find "$1" -type f -iname '*.cpp' -o -iname '*.c' -o -iname '*.h'
 	shift
 done | sort))
 
